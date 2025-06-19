@@ -1,0 +1,677 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --color-bg: #0c0c0c;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #cecfd1;
+    --color-accent: #ffffff;
+    --color-accent-hover: #ffffff;
+    --color-card-bg: #fafafa;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --radius: 12px;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to right, rgb(206, 233, 222), rgb(181, 195, 212), rgb(221, 221, 207));
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+    color: var(--color-accent-hover);
+    outline: none;
+    text-decoration: none;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(8, 8, 8, 0.253);
+    box-shadow: 0 1px 11px rgba(255, 255, 255, 0.13);
+    z-index: 100;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 1.7rem;
+    color: var(--color-text-primary);
+    user-select: none;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    letter-spacing: 1.2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-accent);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+    width: 100%;
+    text-decoration: none;
+}
+
+.box-container {
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    margin: 13%;
+}
+
+.container1 .container2 {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 900px;
+    width: 120px;
+}
+
+@media (max-width: 640px) {
+    .box-container {
+        flex-direction: column;
+    }
+
+    .container1 .container2 {
+        min-height: 150px;
+    }
+}
+
+.container1:hover {
+    transform: translateY(9px);
+    transition: transform 0.4s ease, box-shadow 0.1s ease;
+    cursor: pointer;
+    transform: translateY(1px) scale(1.1);
+}
+
+.container2:hover {
+    transform: translateY(9px);
+    transition: transform 0.4s ease, box-shadow 0.1s ease;
+    cursor: pointer;
+    transform: translateY(1px) scale(1.1);
+}
+
+.container1 {
+    background-color: ghostwhite;
+    /*justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 9.4% auto;*/
+    margin: 10px auto;
+    padding: 15px;
+    width: 320px;
+    height: 427px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgb(0, 0, 0);
+}
+
+.header1 h3 {
+    text-align: center;
+    margin: 14px auto;
+}
+
+.btn button {
+    width: 180px;
+    height: 39px;
+    border: none;
+}
+
+.btn .button-blue {
+    border-radius: 10px;
+    background-color: #2938DA;
+    height: 40px;
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 15.3px;
+    box-shadow: 0px 0px 50px #191E5F inset;
+}
+
+.btn .button-rigth {
+    border-top-right-radius: 10px;
+    background-color: none;
+    background: transparent;
+    border-bottom-right-radius: 10px;
+    height: 30px;
+    font-weight: 600;
+    font-size: 15.3px;
+    color: #19191B;
+}
+
+.btn {
+    height: 40px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0px auto;
+    border: 1px solid grey;
+    width: 270.8px;
+    margin-bottom: 10%;
+}
+
+.input-box {
+    font-size: 12px;
+}
+
+.input-box input {
+    width: 270px;
+    height: 39.5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 7px auto;
+    border-radius: 10px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border: 1.1px solid gray;
+}
+
+.input-box input:hover {
+    border-color: #191E5F;
+    border: 1.6px solid #191E5F;
+}
+
+.input-box button:hover {
+    background-color: black;
+    box-shadow: 0px 0px 14px #000;
+}
+
+.input-box button {
+    height: 36.7px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2938DA;
+    box-shadow: 0px 0px 50px #191E5F inset;
+    color: whitesmoke;
+    font-weight: 500;
+    width: 275px;
+    margin: 13px;
+    font-size: 15px;
+    margin-bottom: 5.8%;
+}
+
+.link p {
+    text-align: center;
+    font-size: 12px;
+    color: black;
+    margin-bottom: 0px;
+}
+
+.link span p {
+    margin: 5px;
+    font-size: 10px;
+    color: rgba(206, 206, 206, 1);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a {
+    font-weight: 500;
+    color: royalblue;
+    text-decoration: none;
+}
+
+.input-box a {
+    padding: 12px;
+}
+
+/* forgot */
+.forgot {
+    padding: 6.3px;
+    text-align: end;
+}
+
+/* logo lock and user i .input-box input font awesome group user, group lock*/
+.user {
+    position: relative;
+}
+
+.input-box .user i {
+    position: absolute;
+    left: 83.3%;
+    margin: 4.5%;
+    font-size: 14px;
+    color: rgba(119, 119, 119, 1);
+}
+
+.input-box .lock i {
+    position: absolute;
+    left: 83.2%;
+    margin: 4.4%;
+    font-size: 14px;
+    color: rgba(119, 119, 119, 1);
+}
+
+.lock {
+    position: relative;
+}
+
+.show-password input {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 3%;
+    margin: 3.8%;
+}
+
+.show-password {
+    position: relative;
+    padding: 6px;
+}
+
+.show-password p {
+    position: absolute;
+    left: 8.6%;
+    color: rgba(67, 67, 67, 1);
+    margin: 12.2px;
+}
+
+
+
+/* register / daftar */
+.container2 {
+    background-color: ghostwhite;
+    /*justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 9.4% auto;*/
+    margin: 10px auto;
+    padding: 15px;
+    width: 320px;
+    height: 427px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgb(0, 0, 0);
+}
+
+.header1 h3 {
+    text-align: center;
+    margin: 14px auto;
+}
+
+.btn button {
+    width: 180px;
+    height: 39px;
+    border: none;
+}
+
+.btn .button-rigth1 {
+    border-radius: 10px;
+    background-color: #2938DA;
+    height: 40px;
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 15.3px;
+    box-shadow: 0px 0px 50px #191E5F inset;
+}
+
+.btn .button-blue1 {
+    border-top-right-radius: 10px;
+    background-color: none;
+    background: transparent;
+    border-bottom-right-radius: 10px;
+    height: 30px;
+    font-weight: 600;
+    font-size: 15.3px;
+    color: #19191B;
+}
+
+.btn {
+    height: 40px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0px auto;
+    border: 1px solid grey;
+    width: 270.8px;
+    margin-bottom: 10%;
+}
+
+.input-box {
+    font-size: 12px;
+}
+
+.input-box input {
+    width: 270px;
+    height: 39.5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 7px auto;
+    border-radius: 10px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border: 1.1px solid gray;
+}
+
+.link p {
+    text-align: center;
+    font-size: 12px;
+    color: black;
+    margin-bottom: 0px;
+}
+
+.link span p {
+    margin: 5px;
+    font-size: 10px;
+    color: rgba(206, 206, 206, 1);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a {
+    font-weight: 500;
+    color: royalblue;
+    text-decoration: none;
+}
+
+.input-box a {
+    padding: 12px;
+}
+
+/* forgot */
+.forgot {
+    padding: 6.3px;
+    text-align: end;
+}
+
+/* logo lock and user i .input-box input font awesome group user, group lock*/
+.user {
+    position: relative;
+}
+
+.input-box .user i {
+    position: absolute;
+    left: 83.3%;
+    margin: 4.5%;
+    font-size: 14px;
+    color: rgba(119, 119, 119, 1);
+}
+
+.input-box .lock i {
+    position: absolute;
+    left: 83.2%;
+    margin: 4.4%;
+    font-size: 14px;
+    color: rgba(119, 119, 119, 1);
+}
+
+.lock {
+    position: relative;
+}
+
+.show-password input {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 3%;
+    margin: 3.8%;
+}
+
+.show-password {
+    position: relative;
+    padding: 6px;
+}
+
+.show-password p {
+    position: absolute;
+    left: 8.6%;
+    color: rgba(67, 67, 67, 1);
+    margin: 12.2px;
+}
+
+/* paragraf abput website */
+.container-paragraf {
+    background: rgba(255, 255, 255, 0.479);
+    padding: 32px 40px;
+}
+
+h1.intro {
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+ul.styled-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+ul.styled-list li {
+    position: relative;
+    padding-left: 36px;
+    font-size: 1.1rem;
+    cursor: default;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 24px;
+    }
+
+    p.intro {
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+    }
+
+    ul.styled-list li {
+        font-size: 1rem;
+        padding-left: 30px;
+    }
+
+    ul.styled-list li::before {
+        width: 10px;
+        height: 10px;
+        left: 2px;
+    }
+}
+
+
+/* point penting */
+.important-form {
+    background: rgba(255, 255, 255, 0.479);
+    color: #0e0c0c;
+    padding: 21px;
+}
+
+.important-form ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    margin-bottom: 32px;
+    text-align: left;
+}
+
+.important-form li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+/* BAGIAN FOOTER */
+:root {
+    --radius: 0.75rem;
+    --max-width: 1200px;
+    --transition: 0.3s ease;
+    --icon-size: 24px;
+}
+
+.box-web {
+    display: flex;
+}
+
+.instagram {
+    margin: 10px;
+}
+
+.github {
+    margin: 10px;
+}
+
+.box-web i {
+    color: #080808;
+    font-size: 21px;
+    border: 1.5px solid rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 40px;
+    transition: box-shadow 0.3s ease;
+}
+
+.box-web i:hover {
+    box-shadow: 0px 0px 14px rgb(40, 56, 56);
+    background-color: #080808;
+    color: white;
+    transform: translateY(1px) scale(1.2);
+}
+
+footer.footer {
+    background: rgba(255, 255, 255, 0.801);
+    padding: 3rem 1rem;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.05);
+}
+
+.footer-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1 1 180px;
+    min-width: 180px;
+}
+
+.footer-section li {
+    list-style-type: none;
+}
+
+.footer-section h2 {
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: rgb(26, 26, 24);
+    margin-bottom: 1rem;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: rgb(68, 61, 61);
+    font-weight: 500;
+    transition: color var(--transition);
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+    color: #1f2937;
+    outline: none;
+    text-decoration: underline;
+}
+
+.footer-contact {
+    font-weight: 500;
+    color: #141414;
+    word-break: break-word;
+}
+
+.footer-contact a {
+    color: #374151;
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.footer-contact a:hover,
+.footer-contact a:focus {
+    color: #1f2937;
+    text-decoration: underline;
+    outline: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.875rem;
+    color: rgb(53, 53, 53);
+    user-select: none;
+    border-top: 1.7px solid #6b6b6b;
+    padding-top: 1rem;
+    font-weight: 400;
+}
+
+@media (max-width: 640px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-section {
+        min-width: auto;
+    }
+}
